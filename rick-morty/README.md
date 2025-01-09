@@ -63,27 +63,3 @@ To run the project locally, follow these steps:
 3. Error Handling: If no characters are found, a message will appear prompting you to try another name.
 
 
-### Project Structure
-
-rick-morty/
-│
-├── src/
-│   ├── components/
-│   │   └── CharacterTable.js        # Component displaying character data
-│   ├── pages/
-│   │   ├── fonts/                   # Font files (if any)
-│   │   ├── images/                  # Image files (e.g., backgrounds, icons)
-│   │   ├── styles/                  # CSS styles (e.g., for Home, Profile pages)
-│   │   ├── Home.js                  # Home page component
-│   │   └── Profile.js               # Profile page component
-│   ├── App.js                       # Main app component with routing
-│   ├── index.js                     # Entry point of the application
-│   └── setupTests.js                # Configuration for Jest/React Testing Library (optional)
-│
-├── public/
-│   ├── index.html                   # Main HTML file
-│
-│
-├── package.json                     # Project metadata, dependencies, scripts
-├── package-lock.json                # Auto-generated dependency lock file
-└── README.md                        # Project documentation
