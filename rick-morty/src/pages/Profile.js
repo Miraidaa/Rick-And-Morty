@@ -12,21 +12,17 @@ function Profile() {
   const [loading, setLoading] = useState(true);  
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      axios
-        .get(`https://rickandmortyapi.com/api/character/${id}`)
-        .then((response) => {
-          setCharacter(response.data);
-          setLoading(false); 
-        })
-        .catch((error) => {
-            toast.error('Error fetching character. Please try again.');  
-            setLoading(false);
-          });
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, [id]);
+    axios
+      .get(`https://rickandmortyapi.com/api/character/${id}`)
+      .then((response) => {
+        setCharacter(response.data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        toast.error('Error fetching character. Please try again.');
+        setLoading(false);
+      });
+  }, [id]); 
 
   if (loading) {
     return (
@@ -35,6 +31,8 @@ function Profile() {
       </div>
     );
   }
+
+  
 
  
   return (
